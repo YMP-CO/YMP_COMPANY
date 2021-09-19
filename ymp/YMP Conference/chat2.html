@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html id="home" lang="en">
+
+    <head>
+        <title>Чат</title>
+
+        <script>
+            if(!location.hash.replace('#', '').length) {
+                location.href = location.href.split('#')[0] + '#' + (Math.random() * 100).toString().replace('.', '');
+                location.reload();
+            }
+        </script>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" href="https://www.webrtc-experiment.com/style.css">
+
+        <style>
+            input {
+                border: 1px solid #d9d9d9;
+                border-radius: 1px;
+                font-size: 2em;
+                margin: .2em;
+                width: 100%;
+            }
+
+            p { padding: 1em; }
+
+            li {
+                border-bottom: 1px solid rgb(189, 189, 189);
+                border-left: 1px solid rgb(189, 189, 189);
+                padding: .5em;
+            }
+
+            #chat-table blockquote {
+                border: 1px dotted gray;
+                margin: 1em 5em;
+                padding: 1em 2em;
+            }
+
+            #chat-table blockquote hr {
+                border: 0;
+                border-top: 1px dotted #BBA9A9;
+                margin: 1em -2em;
+            }
+
+            input[disabled] {
+              background: #f5f0f0;
+              border: 1px solid #f3e4e4;
+              cursor: not-allowed;
+            }
+
+            margin-top: 0!important;
+        margin-bottom: 0!important;
+        padding: 10px 10px!important;
+      }
+
+      blockquote {
+        margin: 10px;
+        border-radius: 10px;
+        background: rgb(253, 253, 253);
+        padding: 8px 20px;
+        font-size: 25px;
+        font-weight: 200;
+        line-height: 1.5;
+        word-spacing: 5px;
+      }
+
+      section blockquote {
+        color: #EC008C;
+      }
+
+      .specific-h2, h1 {
+        font-size: 35px;
+        font-weight: 200;
+        padding: 5px 10px;
+        border-bottom: 1px dotted #EC008C;
+      }
+
+      .specific-h2 a {
+        color: #EC008C;
+      }
+
+      h1 {
+        font-size: 40px;
+        color: #EC008C;
+      }
+        </style>
+        <script>
+            document.createElement('article');
+            document.createElement('footer');
+        </script>
+    </head>
+
+    <body>
+        <article>
+            <header style="text-align: center;">
+                <h1>
+                 Чат
+                </h1>
+
+             
+            </header>
+
+       
+            <section class="experiment">
+
+                <!-- <HTML code for you> ::: just copy this section! -->
+                              <table id="chat-output" class="hidden"></table>
+ <table class="visible">
+                    <tr>
+                        <td style="text-align: right;width:70%!important;">
+                            <input type="text" id="conference-name" placeholder="Введите имя">
+                        </td>
+
+                        <td style="width: 50%!important;">
+                            <button id="start-conferencing" href="#">Создать чат!</button>
+                        </td>
+                    </tr>
+                </table>
+
+                <table id="rooms-list" class="visible"></table>
+
+                <table class="visible">
+                    <tr>
+                        <td style="text-align: center;">
+                            <strong></strong> ?? <a href="" target="_blank"
+                                                                        title=""><code><strong
+                                                                                                                                                                  id="unique-token">#123456789</strong></code></a>
+                        </td>
+                    </tr>
+                </table>
+
+         
+                <blockquote>
+Войдите в чат конференции или создайте несколько своих чатов!
+                </blockquote>
+            </section>
+       <table id="chat-table" class="center-table hidden">
+                    <tr>
+                        <td style="text-align: center;">
+                            <input type="text" id="chat-message" disabled>
+                            <button id="post-chat-message">отправить</button>
+                        </td>
+                    </tr>
+                </table>
+ 
+            <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+            <script src="https://www.webrtc-experiment.com/socket.io.js"> </script>
+            <script src="https://www.webrtc-experiment.com/RTCPeerConnection-v1.5.js"> </script>
+            <script src="https://ymp-co.github.io/YMP_COMPANY/ymp/YMP Conference/chat.js"> </script>
+            <script src="https://ymp-co.github.io/YMP_COMPANY/ymp/YMP Conference/ymp-ui.js"> </script>
+
+            <!-- </HTML code for you> ::: end copy this section! -->
+
+            <section style="border: 1px solid rgb(189, 189, 189); border-radius: .2em; margin: 1em 3em;">
+                <h2 id="feedback" style="border-bottom: 1px solid rgb(189, 189, 189); padding: .2em .4em;">Feedback</h2>
+
+                <div>
+                    <textarea id="message"
+                              style="border: 1px solid rgb(189, 189, 189); height: 8em; margin: .2em; outline: none; resize: vertical; width: 98%;"
+                              placeholder="Have any message? Suggestions or something went wrong?"></textarea>
+                </div>
+                <button id="send-message" style="font-size: 1em;">Отправить!</button>
+            </section>
+
+            <section class="experiment own-widgets latest-commits">
+          
+            </section>
+        </article>
+
+     
+
+        <footer>
+            <p>
+             
+            </p>
+        </footer>
+
+        <!-- commits.js is useless for you! -->
+        <script src="https://www.webrtc-experiment.com/commits.js" async> </script>
+    </body>
+</html>
